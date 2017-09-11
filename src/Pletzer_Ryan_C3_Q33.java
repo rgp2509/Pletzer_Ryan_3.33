@@ -1,5 +1,14 @@
-import java.util.Scanner;
+/*
+(Financial: compare costs) Suppose you shop for rice in two different packages. You would like to write a program
+to compare the cost. The program prompts the user to enter the weight and price of the each package and displays
+the one with the better price
 
+Author: Ryan Pletzer
+All rights reserved
+
+ */
+
+import java.util.Scanner;
 public class Pletzer_Ryan_C3_Q33 {
     // Deceleration of global variables
     private static double input1Cost, input1Quantity, input2cost, input2Quantity;
