@@ -12,12 +12,14 @@ import java.util.Scanner;
 public class Pletzer_Ryan_C3_Q33 {
     // Deceleration of global variables
     private static double input1Cost, input1Quantity, input2cost, input2Quantity;
+    private static String value;
     public static void main(String[] args) {
     welcomePrompt();
-    compare();
+    value = compare(input1Cost, input1Quantity, input2cost, input2Quantity);
+    System.out.println("Object 1 is " + "\"" + value + "\""+"/cost to object 2");
     }
 
-    private static void welcomePrompt (){
+    public static void welcomePrompt (){
         // Welcome prompt assigning a variable to each global instance
         Scanner input = new Scanner(System.in);
         System.out.println("Welcome to the price comparison tool");
@@ -31,13 +33,15 @@ public class Pletzer_Ryan_C3_Q33 {
         System.out.println("Please enter package 2's total quantity (include no units)");
         input2Quantity = input.nextDouble();
     }
-    private static void compare (){
+    public static String compare (double input1Cost, double input1Quantity, double input2cost, double input2Quantity){
         //comparing the unit price of the two objects; if equal, less then, greater then (unit 1 perspective)
+        String value = new String();
         if (input1Cost/input1Quantity == input2cost/input2Quantity)
-                System.out.println("the items cost the same");
+            value = ("Equal");
         else if (input1Cost/input1Quantity <= input2cost/input2Quantity)
-                System.out.println("The first item is cheaper");
+            value = ("Less");
         else if (input1Cost/input1Quantity >= input2cost/input2Quantity)
-                System.out.println("The second item is cheaper");
+            value =("Greater");
+        return value;
     }
 }
